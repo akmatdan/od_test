@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/route_manager.dart';
 import 'package:od_photo/utils/theme/theme.dart';
 
-void main() {
+import 'features/auth/screens/onboarding/onboarding.dart';
+
+void main() async {
   runApp(const App());
 }
 
@@ -16,7 +18,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: TAppTheme.lightTheme,
       darkTheme: TAppTheme.darkTheme,
-      home: const Scaffold(),
+      home: OnboardingScreen(),
     );
   }
 }
