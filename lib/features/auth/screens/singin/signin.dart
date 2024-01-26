@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:od_photo/features/auth/screens/signup/signin_next_screen.dart';
 
 import '../../../../utils/constants/sizes.dart';
 // import '../../../../utils/validators/validation.dart';
