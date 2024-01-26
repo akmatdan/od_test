@@ -4,9 +4,10 @@ import 'package:od_photo/features/components/text_fields/custom_text_form_field.
 
 import '../../../../utils/constants/sizes.dart';
 // import '../../../../utils/validators/validation.dart';
+import '../../../app_navigation.dart';
 import '../../../components/buttons/back_arrow_button.dart';
 import '../../../components/buttons/primary_button.dart';
-import '../../../home/discover.dart';
+import '../../../home/home_page.dart';
 
 class SignInNextScreen extends StatefulWidget {
   const SignInNextScreen({super.key});
@@ -49,10 +50,10 @@ class _SignInNextScreenState extends State<SignInNextScreen> {
                     text: 'Sign up',
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const DiscoverMainPage(),
+                            builder: (context) => AppNavigation(),
                           ),
                         );
                       }

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../utils/constants/sizes.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+class AddPhotoPage extends StatelessWidget {
+  const AddPhotoPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
       appBar: AppBar(
         automaticallyImplyLeading: false,
         title:
-            Text("Discover", style: Theme.of(context).textTheme.headlineLarge),
+            Text("Add Photo", style: Theme.of(context).textTheme.headlineLarge),
       ),
       body: Padding(
         padding: const EdgeInsets.all(TSizes.spaceBtwItems),

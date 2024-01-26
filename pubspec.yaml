@@ -16,12 +16,12 @@ dependencies:
   http: ^1.1.0
   firebase_auth: ^3.3.3
   firebase_core: ^1.10.6
-  shared_preferences: ^2.0.8
-  flutter_svg: ^2.0.9
+  get: ^4.6.6
 
 # Icons
   iconsax: ^0.0.8
   cupertino_icons: ^1.0.2
+  flutter_svg: ^2.0.9
 
 # ----- ./ PACKEGES END ----- #
 

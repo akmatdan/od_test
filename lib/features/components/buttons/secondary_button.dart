@@ -18,7 +18,13 @@ class SecondaryButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(8.0),
           ),
         ),
-        child: Text(text.toUpperCase()),
+        child: Text(
+          text.toUpperCase(),
+          style: const TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
       ),
     );
   }

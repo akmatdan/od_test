@@ -22,7 +22,7 @@ class TTextTheme {
     titleMedium: const TextStyle().copyWith(
         fontSize: 16.0, fontWeight: FontWeight.w500, color: TColors.dark),
     titleSmall: const TextStyle().copyWith(
-        fontSize: 16.0, fontWeight: FontWeight.w400, color: TColors.dark),
+        fontSize: 13.0, fontWeight: FontWeight.w900, color: TColors.dark),
     bodyLarge: const TextStyle().copyWith(
         fontSize: 14.0, fontWeight: FontWeight.w700, color: TColors.black),
     bodyMedium: const TextStyle().copyWith(

@@ -3,6 +3,7 @@ import 'package:od_photo/features/auth/screens/signup/signin_next_screen.dart';
 
 import '../../../../utils/constants/sizes.dart';
 // import '../../../../utils/validators/validation.dart';
+import '../../../app_navigation.dart';
 import '../../../components/buttons/back_arrow_button.dart';
 import '../../../components/buttons/primary_button.dart';
 import '../../../components/text_fields/custom_text_form_field.dart';
@@ -65,10 +66,10 @@ class _SignInScreenState extends State<SignInScreen> {
                     text: 'log in',
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const SignInNextScreen(),
+                            builder: (context) => AppNavigation(),
                           ),
                         );
                       }
