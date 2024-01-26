@@ -17,7 +17,7 @@ class AppNavigation extends StatelessWidget {
     return Scaffold(
       bottomNavigationBar: Obx(
         () => NavigationBar(
-          height: 80,
+          height: 40,
           elevation: 0,
           selectedIndex: controller.selectedIndex.value,
           onDestinationSelected: (index) =>
