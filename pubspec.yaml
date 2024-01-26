@@ -17,6 +17,7 @@ dependencies:
   firebase_auth: ^3.3.3
   firebase_core: ^1.10.6
   get: ^4.6.6
+  riverpod: ^2.4.9
 
 # Icons
   iconsax: ^0.0.8

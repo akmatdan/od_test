@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
+
 import 'package:od_photo/features/chat/chat_page.dart';
 import 'package:od_photo/features/home/home_page.dart';
 import 'package:od_photo/features/new_photo/add_photo_page.dart';
@@ -22,89 +23,76 @@ class AppNavigation extends StatelessWidget {
           onDestinationSelected: (index) =>
               controller.selectedIndex.value = index,
           destinations: [
-            buildNavigationDestination(
-              'assets/icons/home.svg',
+            // home
+            NavigationDestination(
+              icon: SvgPicture.asset(
+                'assets/icons/home.svg',
+                width: 16,
+                height: 16,
+              ),
               label: '',
             ),
-            buildNavigationDestination(
-              'assets/icons/search.svg',
+
+            // search
+            NavigationDestination(
+              icon: SvgPicture.asset(
+                'assets/icons/search.svg',
+                width: 16,
+                height: 16,
+              ),
               label: '',
             ),
-            buildGradientNavigationDestination(
-              'assets/icons/plus.svg',
+
+            // plus
+            NavigationDestination(
+              icon: Container(
+                height: 40,
+                clipBehavior: Clip.antiAlias,
+                decoration: const BoxDecoration(
+                  gradient: LinearGradient(
+                    begin: Alignment(-0.38, -0.93),
+                    end: Alignment(0.38, 0.93),
+                    colors: [Color(0xFFFF00D6), Color(0xFFFF4C00)],
+                  ),
+                  borderRadius: BorderRadius.all(Radius.circular(20)),
+                ),
+                child: Center(
+                  child: SvgPicture.asset(
+                    'assets/icons/plus.svg',
+                    color: Colors.white,
+                    width: 16,
+                    height: 16,
+                  ),
+                ),
+              ),
               label: '',
             ),
-            buildNavigationDestination(
-              'assets/icons/chat.svg',
+
+            // chat
+            NavigationDestination(
+              icon: SvgPicture.asset(
+                'assets/icons/chat.svg',
+                width: 16,
+                height: 16,
+              ),
               label: '',
             ),
-            buildNavigationDestination(
-              'assets/icons/person.svg',
+
+            // profile
+            NavigationDestination(
+              icon: SvgPicture.asset(
+                'assets/icons/person.svg',
+                width: 16,
+                height: 16,
+              ),
               label: '',
             ),
-          ].map((destination) => destination.icon).toList(),
+          ],
         ),
       ),
       body: Obx(() => controller.screens[controller.selectedIndex.value]),
     );
   }
-
-  NavigationDestination buildNavigationDestination(
-    String assetPath, {
-    String label = '',
-  }) {
-    return NavigationDestination(
-      icon: SvgPicture.asset(
-        assetPath,
-        width: 16,
-        height: 16,
-      ),
-      label: label,
-    );
-  }
-
-  NavigationDestination buildGradientNavigationDestination(
-    String assetPath, {
-    String label = '',
-    double width = 20,
-    double height = 20,
-    double borderRadius = 10,
-  }) {
-    return NavigationDestination(
-      icon: Container(
-        width: width,
-        height: height,
-        clipBehavior: Clip.antiAlias,
-        decoration: BoxDecoration(
-          gradient: const LinearGradient(
-            begin: Alignment(-0.38, -0.93),
-            end: Alignment(0.38, 0.93),
-            colors: [Color(0xFFFF00D6), Color(0xFFFF4C00)],
-          ),
-          borderRadius: BorderRadius.all(Radius.circular(borderRadius)),
-        ),
-        child: Center(
-          child: SvgPicture.asset(
-            assetPath,
-            color: Colors.white,
-            width: 16,
-            height: 16,
-          ),
-        ),
-      ),
-      label: label,
-    );
-  }
-}
-
-class NavigationDestination {
-  final Widget icon;
-  final String label;
-
-  NavigationDestination({
-    required this.icon,
-    required this.label,
-  });
 }
 
 class NavigationController extends GetxController {

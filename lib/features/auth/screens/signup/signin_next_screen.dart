@@ -7,7 +7,6 @@ import '../../../../utils/constants/sizes.dart';
 import '../../../app_navigation.dart';
 import '../../../components/buttons/back_arrow_button.dart';
 import '../../../components/buttons/primary_button.dart';
-import '../../../home/home_page.dart';
 
 class SignInNextScreen extends StatefulWidget {
   const SignInNextScreen({super.key});
@@ -53,7 +52,7 @@ class _SignInNextScreenState extends State<SignInNextScreen> {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => AppNavigation(),
+                            builder: (context) => const AppNavigation(),
                           ),
                         );
                       }
