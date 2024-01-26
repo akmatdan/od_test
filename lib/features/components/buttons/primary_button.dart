@@ -19,7 +19,13 @@ class PrimaryButton extends StatelessWidget {
             borderRadius: BorderRadius.circular(8.0),
           ),
         ),
-        child: Text(text.toUpperCase()),
+        child: Text(
+          text.toUpperCase(),
+          style: const TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w700,
+          ),
+        ),
       ),
     );
   }

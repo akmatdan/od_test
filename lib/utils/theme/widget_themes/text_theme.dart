@@ -8,7 +8,11 @@ class TTextTheme {
   /// Customizable Light Text Theme
   static TextTheme lightTextTheme = TextTheme(
     headlineLarge: const TextStyle().copyWith(
-        fontSize: 32.0, fontWeight: FontWeight.bold, color: TColors.dark),
+      fontSize: 36.0,
+      fontWeight: FontWeight.w400,
+      color: TColors.dark,
+      fontFamily: 'Comfortaa',
+    ),
     headlineMedium: const TextStyle().copyWith(
         fontSize: 24.0, fontWeight: FontWeight.w600, color: TColors.dark),
     headlineSmall: const TextStyle().copyWith(
